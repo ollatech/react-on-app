@@ -4,6 +4,9 @@ export class Container {
 	constructor() {
 		this.app = ReactOnApp;
 	}
+	app() {
+		return this.app;
+	}
 	store(data) {
 
 	}
