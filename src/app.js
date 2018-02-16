@@ -3,9 +3,8 @@ import store from './store';
 import server from './server';
 import broswer from './broswer';
 import createElement from './createElement';
-const ctx = () => {
-  return ((typeof window !== 'undefined') && window) || ((typeof global !== 'undefined') && global) || this;
-};
+import expose from './expose';
+const ctx = expose();
 ctx.ReactOnApp = {
 	component() {
 		return component;
