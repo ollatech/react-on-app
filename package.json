@@ -1,6 +1,6 @@
 {
   "name": "react-on-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "babel module loader for webpack",
   "files": [
     "lib"
@@ -37,11 +37,10 @@
     "lint-staged": "^4.0.0",
     "nyc": "^11.0.1",
     "prettier": "^1.2.2",
-    "rimraf": "^2.4.3",
-    "webpack": "^3.0.0",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "prop-types": "^15.6.0"
+    "rimraf": "^2.4.3"
   },
   "devDependencies": {
     "babel-loader": "^7.1.1",
