@@ -1,8 +1,4 @@
-import context from './context';
-const ctx = context();
-
 const components = new Map();
-
 export default  {
 	register(args) {
 		Object.keys(args).forEach(name => {
@@ -21,8 +17,7 @@ export default  {
 			return components.get(name);
 		}
 		const keys = Array.from(components.keys()).join(', ');
-		throw new Error(`Could not find component registered with name ${name}. \
-			Registered component names include [ ${keys} ]. Maybe you forgot to register the component?`);
+		throw new Error(`Could not find component registered with name ${name}`);
 	},
 	components() {
 		return components;
