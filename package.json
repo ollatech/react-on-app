@@ -1,6 +1,6 @@
 {
   "name": "react-on-app",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "babel module loader for webpack",
   "files": [
     "lib/*"
