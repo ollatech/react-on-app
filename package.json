@@ -1,6 +1,6 @@
 {
   "name": "react-on-app",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "babel module loader for webpack",
   "files": [
     "lib"
@@ -12,12 +12,11 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib/",
-    "build": "babel src/ --out-dir lib/",
-    "prepublish": "yarn run clean && yarn run build && yarn pack"
+    "build": "babel src/ --out-dir lib/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ollatech/react-on-app.git"
+    "url": "https://github.com/ollatech/react-on-app.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -74,13 +73,5 @@
     "js-yaml": ">= 3.0.0",
     "react": ">= 0.14",
     "react-dom": ">= 0.14"
-  },
-  "bugs": {
-    "url": "https://github.com/ollatech/react-on-app/issues"
-  },
-  "homepage": "https://github.com/ollatech/react-on-app#readme",
-  "directories": {
-    "lib": "lib"
-  },
-  "author": "ollatech"
+  }
 }
