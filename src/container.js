@@ -14,6 +14,6 @@ export default class Container {
 
 	}
 	component(args) {
-		return this.app.component().set($args);
+		return this.app.component().set(args);
 	}
 }
