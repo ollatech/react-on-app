@@ -3,16 +3,16 @@
   "version": "1.2.4",
   "description": "babel module loader for webpack",
   "files": [
-    "lib"
+    "pack"
   ],
-  "main": "lib/index.js",
+  "main": "pack/index.js",
   "engines": {
     "node": ">=4"
   },
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf lib/",
-    "build": "babel src/ --out-dir lib/"
+    "clean": "rimraf pack/",
+    "build": "babel src/ --out-dir pack/"
   },
   "repository": {
     "type": "git",
