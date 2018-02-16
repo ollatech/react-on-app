@@ -1,6 +1,6 @@
 import ReactOnApp from './app';
 
-export class Provider {
+export class Container {
 	constructor() {
 		this.app = ReactOnApp;
 	}
