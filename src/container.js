@@ -1,6 +1,6 @@
 import ReactOnApp from './app';
 
-export class Container {
+export default class Container {
 	constructor() {
 		this.app = ReactOnApp;
 	}
