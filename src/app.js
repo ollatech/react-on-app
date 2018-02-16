@@ -1,4 +1,5 @@
 import component from './component';
+import store from './store';
 import server from './server';
 import broswer from './broswer';
 import createElement from './createElement';
@@ -6,10 +7,13 @@ const ctx = () => {
   return ((typeof window !== 'undefined') && window) || ((typeof global !== 'undefined') && global) || this;
 };
 ctx.ReactOnApp = {
-	register(args) {
-		return component.register(args);
+	component() {
+		return component;
 	},
-	render(domId, name, props, appContext, serverSide) {
+	store() {
+		return store;
+	},
+	render(domId, name, props, contexts, serverSide) {
 		const componentObj = component.get(name);
 		const componentResult = createElement({componentObj, props});
 		if(serverSide) {

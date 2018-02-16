@@ -1,6 +1,6 @@
 import ReactOnApp from './app';
+
 export class Provider {
-	
 	constructor() {
 		this.app = ReactOnApp;
 	}
@@ -11,6 +11,6 @@ export class Provider {
 
 	}
 	component(args) {
-		return this.app.register($args);
+		return this.app.component().set($args);
 	}
 }
