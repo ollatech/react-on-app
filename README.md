@@ -5,7 +5,7 @@ Integrate react on anywhere
 
 ## Installation
 
-  `yarn install react-on-app`
+  `yarn add react-on-app`
 
 ## Usage
 
