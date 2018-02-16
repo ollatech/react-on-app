@@ -1,3 +1,3 @@
 import Provider from './provider';
-export Provider;
+exports.Provider = Provider;
 export default Provider;
