@@ -1,7 +1,8 @@
 import ReactOnApp from './app';
 export class Provider {
-	this.app = ReactOnApp;
-	constructor(){
+	
+	constructor() {
+		this.app = ReactOnApp;
 	}
 	store(data) {
 
