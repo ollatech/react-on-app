@@ -10,8 +10,16 @@ ctx.ReactOnApp = {
 	register(args) {
 		return component.register(args);
 	},
-	render(options, serverSide = false) {
-		const { name, domNodeId, props, railsContext } = options;
+	/**
+	 * [render description]
+	 * @param  {String}  domId      [description]
+	 * @param  {String}  component  [description]
+	 * @param  {Object}  props      [description]
+	 * @param  {Object}  appContext [description]
+	 * @param  {Boolean} serverSide [description]
+	 * @return {[type]}             [description]
+	 */
+	render(domId, name, props = {}, appContext = {}, serverSide = false) {
 		const componentObj = component.get(name);
 		if(!componentObj) {
 			console.log('component not found', name);
@@ -19,12 +27,12 @@ ctx.ReactOnApp = {
 		const componentResult = createElement({
 			componentObj,
 			props,
-			railsContext
+			appContext
 		});
 		if(serverSide) {
 			return server.render(componentResult)
 		}
-		return broswer.render(componentResult, domNodeId)
+		return broswer.render(componentResult, domId)
 	}
 };
 
