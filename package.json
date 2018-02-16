@@ -1,0 +1,92 @@
+{
+    "name": "react-on-php",
+    "version": "1.0.0",
+    "description": "babel module loader for webpack",
+    "files": [
+        "lib"
+    ],
+    "main": "lib/index.js",
+    "engines": {
+        "node": ">=4"
+    },
+    "license": "MIT",
+    "scripts": {
+        "clean": "rimraf lib/",
+        "build": "babel src/ --out-dir lib/",
+        "format": "prettier --write --trailing-comma all \"src/**/*.js\" \"test/**/*.test.js\" \"test/helpers/*.js\" && prettier --write --trailing-comma es5 \"scripts/*.js\"",
+        "lint": "eslint src test",
+        "precommit": "lint-staged",
+        "prepublish": "yarn run clean && yarn run build",
+        "preversion": "yarn run test",
+        "test": "yarn run lint && cross-env BABEL_ENV=test yarn run build && yarn run test-only",
+        "test-only": "nyc ava"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ollatech/react-on-php.git"
+    },
+    "dependencies": {
+        "ava": "^0.22.0",
+        "babel-cli": "^6.18.0",
+        "babel-core": "^6.0.0",
+        "babel-eslint": "^7.1.0",
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-plugin-react-intl": "^2.1.3",
+        "babel-preset-env": "^1.2.0",
+        "babel-register": "^6.18.0",
+        "cross-env": "^5.0.0",
+        "eslint": "^4.1.0",
+        "eslint-config-babel": "^7.0.0",
+        "eslint-plugin-flowtype": "^2.25.0",
+        "eslint-plugin-prettier": "^2.1.2",
+        "husky": "^0.14.0",
+        "lint-staged": "^4.0.0",
+        "nyc": "^11.0.1",
+        "prettier": "^1.2.2",
+        "rimraf": "^2.4.3",
+        "webpack": "^3.0.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "prop-types": "^15.6.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.1.1",
+        "babel-plugin-react-transform": "^2.0.2",
+        "babel-plugin-transform-flow-strip-types": "^6.22.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "babel-runtime": "^6.25.0",
+        "babel-tape-runner": "^2.0.1",
+        "babel-types": "^6.25.0",
+        "babelify": "^7.3.0",
+        "blue-tape": "^1.0.0",
+        "create-react-class": "^15.6.0",
+        "eslint": "^3.19.0",
+        "eslint-config-shakacode": "^15.0.0",
+        "eslint-plugin-import": "^2.6.1",
+        "eslint-plugin-jsx-a11y": "^5.1.1",
+        "eslint-plugin-react": "^7.1.0",
+        "flow-bin": "^0.51.1",
+        "jsdom": "^11.1.0",
+        "prop-types": "^15.5.10",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-transform-hmr": "^1.0.4",
+        "redux": "^3.7.2",
+        "release-it": "^2.8.2",
+        "tap-spec": "^4.1.1",
+        "tape": "^4.7.0",
+        "webpack": "^3.4.1",
+        "webpack-manifest-plugin": "^1.2.1"
+    },
+    "peerDependencies": {
+        "babel-runtime": ">= 6",
+        "js-yaml": ">= 3.0.0",
+        "react": ">= 0.14",
+        "react-dom": ">= 0.14"
+    }
+}
