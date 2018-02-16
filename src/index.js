@@ -7,32 +7,17 @@ import createElement from './createElement';
 const ctx = context();
 
 ctx.ReactOnApp = {
+
 	register(args) {
 		return component.register(args);
 	},
-	/**
-	 * [render description]
-	 * @param  {String}  domId      [description]
-	 * @param  {String}  component  [description]
-	 * @param  {Object}  props      [description]
-	 * @param  {Object}  appContext [description]
-	 * @param  {Boolean} serverSide [description]
-	 * @return {[type]}             [description]
-	 */
-	render(domId, name, props = {}, appContext = {}, serverSide = false) {
+	render(domId, name, props, appContext, serverSide ) {
 		const componentObj = component.get(name);
-		if(!componentObj) {
-			console.log('component not found', name);
-		}
-		const componentResult = createElement({
-			componentObj,
-			props,
-			appContext
-		});
+		const componentResult = createElement({componentObj, props});
 		if(serverSide) {
-			return server.render(componentResult)
+			return server.render(componentResult);
 		}
-		return broswer.render(componentResult, domId)
+		return broswer.render(componentResult, domId);
 	}
 };
 
